@@ -37,7 +37,7 @@ from sklearn.model_selection import TimeSeriesSplit
 
 # ✅ 기존 코드 import (백테스트 로직은 그대로 재사용)
 import backtest as bt
-#import signal_engine_modified as se
+#import signal_engine as se
 
 import history.signal_logic_20260205_202416 as se
 
@@ -311,7 +311,7 @@ class EnhancedBacktestEngine(bt.BacktestEngine):
 
     # --- 핵심: run()을 원본과 동일한 순서로 복제 + signal_time feature 저장만 추가 ---
     def run(self, btc_df_full: pd.DataFrame, alt_dict_full: dict[str, pd.DataFrame]):
-        limit = 100000
+        limit = 30000
         window = bt.BTConfig.WINDOW_SIZE
 
         if limit > 0:
