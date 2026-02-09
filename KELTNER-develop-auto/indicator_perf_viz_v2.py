@@ -37,9 +37,8 @@ from sklearn.model_selection import TimeSeriesSplit
 
 # ✅ 기존 코드 import (백테스트 로직은 그대로 재사용)
 import backtest as bt
-#import signal_engine as se
+import signal_engine as se
 
-import history.signal_logic_20260205_202416 as se
 
 # ============================================================
 # 0) 유틸
